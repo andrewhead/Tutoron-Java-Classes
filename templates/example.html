@@ -1,0 +1,30 @@
+
+<html>
+    <head>
+        <title>Test for java_classes Tutoron</title>
+        <link rel='icon' href="/static/tutorons/home/img/favicon.png" />
+        <script src="//tutorons.com/static/tutorons-library.js"></script>
+        <script>
+          document.addEventListener("DOMContentLoaded", function (event) {
+            var tutoronsConnection = new tutorons.TutoronsConnection(window, {
+              endpoints: {
+                  java_classes: "{% url 'java_classes' %}",
+              }
+            });
+            tutoronsConnection.scanDom();
+          });
+        </script>
+        <link rel='stylesheet' href="/static/tutorons/home/css/main.css" />
+    </head>
+    <body>
+        <div class='central-div'>
+            <h1 class='main-title'>A Tutoron built for java_classes</h1>
+            <p>
+            The generated Tutoron will scan this <code>&lt;code&gt;</code> block,
+            look for Java classes, and provide an insight about that API member.
+            Use this as a starting point!
+            </p>
+            <pre><code>import java.util.ArrayList;</code></pre>
+        </div>
+    </body>
+</html>
