@@ -38,6 +38,11 @@ Point the Tutorons server to the URLs from the Java classes
 Tutoron.  You can do this by adding these two URL patterns
 to the list of URL patterns in `tutorons/urls.py`:
 
+```python
+    url(r'^java_classes$', 'tutorons.modules.java_classes.views.scan', name='java_classes'),
+    url(r'^java_classes/', include('tutorons.modules.java_classes.urls', namespace='java_classes')),
+```
+
 Then you can start playing around with the server!  Start
 running the server with this command:
 
